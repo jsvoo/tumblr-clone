@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 export const conManager = createContext();
 export default function TumblrContext({ children }) {
-  const url = "http://localhost:4000";
+  const url = "https://tumblr-api.cyclic.app/";
   const [empty, setEmpty] = useState(false);
   const [allComments, setAllComments] = useState([]);
   const [likes, setLikes] = useState([]);
