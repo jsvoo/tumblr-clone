@@ -1,0 +1,92 @@
+.navigation{
+  background-color: #001935;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  z-index: 1;
+}
+.icons-section{
+  width: 30%;
+justify-content: space-between;
+
+.nav-icon{
+  font-size: 25px;
+  color: #A5A5A5;
+}
+}
+
+.logo{
+  font-size: 30px;
+  color: white;
+}
+.pen{
+  padding: 3px 10px;
+  border-radius: 7px;
+  background-color:#00B8FF;
+
+  .nav-icon{
+    color: black;
+  }
+}
+.search-section{
+  width: 50%;
+  background-color: #405368;
+  border-radius: 4px;
+  gap: 0px;
+  align-items: center;
+  padding: 0px 10px;
+  input{
+    padding: 7px;
+    width: 100%;
+    }
+
+
+}
+.search-tumblr{
+  background-color: #405368;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  // color: white;
+}
+.search-tumblr::placeholder{
+      color: grey;
+}
+.search-tumblr:focus{
+  // background-color:white;
+}
+.search-tumblr:focus +.search-section{
+  background-color:white;
+}
+.search-icon{
+  font-size: 20px;
+  color: #A5A5A5;
+}
+
+
+
+.not-logged-in{
+  justify-content: flex-end;
+  gap: 10px;
+  width: 25%;
+
+  .login-btn{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color:#00CF35;
+  }
+  .signup-btn{
+    @extend .login-btn;
+    background-color:#00B8FF;
+
+  }
+}
+
+.bck-white{
+  background: white;
+}
+
+

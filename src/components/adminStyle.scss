@@ -1,0 +1,249 @@
+.admin-container{ 
+  padding-bottom: 300px;
+background-color:white;
+  
+  .d-flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .adminPage {
+    // width: 98%;
+    // margin: auto;
+    // display: flex;
+    // align-items: flex-start;
+    // gap: 20px;
+    
+    // position: absolute;
+    // top: 12vh;
+    padding-top: 50px;
+    background-color: #fff ;
+
+    // height: 100%;
+  }
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    
+  }
+  .profile {
+    width: 130px;
+    height: 130px;
+    // margin: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff; 
+    img{
+      width: 100%; 
+      border-radius: 50%;
+    }
+  }
+  
+  .sidebar {
+    width: 25%;
+    background-color: rgba(185, 43, 39, 0.2);
+    position:fixed;
+    /* border: 1px solid black; */
+    height: 100vh; 
+    padding-top: 20px; 
+    margin: auto;
+  }
+  
+  .nav-button-div {
+    width: 80%;
+    // height: 90%;
+    margin: 10px auto;
+  }
+  
+  .nav-button-div button {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    border: solid 2px #b92b27;
+    /* color: white; */
+  }
+  
+  .admin-body {
+    width: 75%;
+    padding: 10px;
+    position: relative;
+    left: 25%; 
+    // height: 100vh; 
+  }
+  
+  /* CREATE USER */
+  
+  .create-user-section {
+    width: 100%;
+  }
+  
+  .create-user-section form {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .icon {
+    color: #b92b27;
+  }
+  
+  .create-user-section .input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+  
+    border: solid 1px;
+  }
+  
+  .input-area {
+    margin: 20px auto;
+  }
+  .input-area label {
+    margin-bottom: 10px;
+  }
+  .input:focus {
+    background-color: rgba(185, 43, 39, 0.05);
+  }
+  
+  .create-btn {
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 25px;
+    background-color: #b92b27;
+    border-radius: 80px;
+    transition: all 0.3s 0s linear;
+  }
+  
+  .create-btn:hover {
+    border: 2px solid #b92b27;
+    color: #b92b27;
+    background-color: #fff;
+  }
+  
+  /* Manage Users */
+  .users-row {
+    gap: 10px;
+  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  
+    width: 100%;
+    margin-top: 20px;
+  }
+  .user {
+    /* font-size: 20px; */
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #dede;
+    box-shadow: 0px 0px 7px 0px rgba(185, 43, 39, 0.1);
+    height: auto;
+  }
+  
+  .buttons {
+    width: 90%;
+    /* height: 10%; */
+    margin: 10px auto;
+    display: inline-flex;
+  }
+  .user .buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 45px;
+    height: 45px;
+    margin: 2px;
+    outline: none;
+    border: 1px solid #b92b27;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  .buttons button:hover {
+    background-color: #b92b27;
+  }
+  .buttons button:hover .icon {
+    color: #fff;
+  }
+  
+  .post-body-format {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* DASHBOARD CONTENT */
+  .base-color {
+    color: #b92b27;
+  }
+  .dashboard-content {
+    padding: 10px;
+    /* background-color: rgba(238, 238, 238, 0.5); */
+  }
+  
+  .dashboard-row1 {
+    width: 80%;
+    margin: 30px auto;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .count {
+    box-shadow: 0px 0px 20px 1px rgba(9, 5, 4, 0.2) inset;
+    box-shadow: 0px 0px 20px 1px rgba(185, 43, 39, 0.3) inset;
+    background-color: #fff;
+    width: 50%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .count center p,
+  .count center p span,
+  .post div {
+    font-family: cursive;
+  }
+  
+  .post-row {
+    justify-content: space-evenly;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .post {
+    width: 33%;
+    height: 100px;
+    padding: 3px;
+  }
+  
+}
+
+.admin-box{
+  // border-left: 5px dotted blue !important;
+  box-shadow: 0px 0px 5px 0px blue inset  !important;
+  padding-left: 10px !important; 
+}
+.admin-badge{
+  color: blue;
+  font-size: 30px;
+}
+
+.editUserForm{
+  input, select{
+    width: 100%;
+    margin: 4px 0px ;
+    padding: 5px;
+    outline: none;
+    border: 1px solid grey;
+  }
+  select{
+    // padding: 20px;
+    width: 100%; 
+    font-size: 25px;
+  }
+}
