@@ -183,7 +183,7 @@ export default function SignUp() {
               />
             </div>
             {empty === true && loginBody.email === "" ? (
-              <p className="text-danger bg-light w-25">
+              <p className="text-danger bg-light w-25 error-text">
                 {" "}
                 Email field is required
               </p>

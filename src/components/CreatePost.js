@@ -153,7 +153,7 @@ export default function CreatePost() {
               Close
             </button>
             <div className="select">
-              <select name="" id="" disabled className="audience">
+              <select name="" id="" disabled className="audience hide-on-mobile">
                 <option value="">Everyone</option>
                 <option value="">Mature</option>
               </select>
