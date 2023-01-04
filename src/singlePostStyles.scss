@@ -25,3 +25,20 @@ margin: auto;
     outline: none;
   }
 }
+
+@media(max-width:770px){
+  .comments-box{
+    .add-comment-section{
+      width: 100%;
+      display: flex;
+    }
+    padding: 0px;
+    .input{
+      width:80%;
+    }
+    button{
+      padding:0px;
+      height: 0px;
+    }
+  }
+}
