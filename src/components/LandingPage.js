@@ -71,79 +71,156 @@ export default function LandingPage() {
             </div>
           </nav>
           {view.more ? <SelectMore /> : null}
-          <div className="trending">
-            <div className="trending-item">
-              <div className="text-area">
-                <h3>1</h3>
-                <div>
-                  <h4>art</h4>
-                  <h5>#illustration</h5>
+
+          {
+            view.gridView?(
+              <div className="mobile-trending ">
+              <div className="trending-item">
+                <div className="text-area">
+                  <h3>1</h3>
+                  <div>
+                    <h4>art</h4>
+                    <h5>#illustration</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
                 </div>
               </div>
-              <div className="image">
-                <img
-                  src={soccer}
-                  alt="trending item"
-                  className="trending-img"
-                />
-              </div>
-            </div>
-            <div className="trending-item2">
-              <div className="text-area">
-                <h3>2</h3>
-                <div>
-                  <h4>artistis on tumblr</h4>
-                  <h5>#hot</h5>
+              <div className="trending-item2">
+                <div className="text-area">
+                  <h3>2</h3>
+                  <div>
+                    <h4>artistis on tumblr</h4>
+                    <h5>#hot</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
                 </div>
               </div>
-              <div className="image">
-                <img
-                  src={soccer}
-                  alt="trending item"
-                  className="trending-img"
-                />
-              </div>
-            </div>
-            <div className="trending-item3">
-              <div className="text-area">
-                <h3>3</h3>
-                <div>
-                  <h4>supernatural</h4>
-                  <h5>#jensen ackles #misha collins</h5>
+              <div className="trending-item3">
+                <div className="text-area">
+                  <h3>3</h3>
+                  <div>
+                    <h4>supernatural</h4>
+                    <h5>#jensen ackles #misha collins</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
                 </div>
               </div>
-              <div className="image">
-                <img
-                  src={soccer}
-                  alt="trending item"
-                  className="trending-img"
-                />
-              </div>
-            </div>
-            <div className="trending-item4">
-              <div className="text-area">
-                <h3>4</h3>
-                <div>
-                  <h4>rottmnt</h4>
-                  <h5>#tmnt #teenage mutant ninja turtles</h5>
+              <div className="trending-item4">
+                <div className="text-area">
+                  <h3>4</h3>
+                  <div>
+                    <h4>rottmnt</h4>
+                    <h5>#tmnt #teenage mutant ninja turtles</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
                 </div>
               </div>
-              <div className="image">
-                <img
-                  src={soccer}
-                  alt="trending item"
-                  className="trending-img"
-                />
+            
+          
               </div>
-            </div>
-          </div>
+            ):(
+              <div className="trending ">
+              <div className="trending-item">
+                <div className="text-area">
+                  <h3>1</h3>
+                  <div>
+                    <h4>art</h4>
+                    <h5>#illustration</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
+                </div>
+              </div>
+              <div className="trending-item2">
+                <div className="text-area">
+                  <h3>2</h3>
+                  <div>
+                    <h4>artistis on tumblr</h4>
+                    <h5>#hot</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
+                </div>
+              </div>
+              <div className="trending-item3">
+                <div className="text-area">
+                  <h3>3</h3>
+                  <div>
+                    <h4>supernatural</h4>
+                    <h5>#jensen ackles #misha collins</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
+                </div>
+              </div>
+              <div className="trending-item4">
+                <div className="text-area">
+                  <h3>4</h3>
+                  <div>
+                    <h4>rottmnt</h4>
+                    <h5>#tmnt #teenage mutant ninja turtles</h5>
+                  </div>
+                </div>
+                <div className="image">
+                  <img
+                    src={soccer}
+                    alt="trending item"
+                    className="trending-img"
+                  />
+                </div>
+              </div>
+            
+          
+              </div>
+            )
+          }
+         
 
           <div className={view.gridView ? "gridView" : "columnView"}>
             {posts.length
               ? posts.map((post, i) => {
                   return (
                     <div className="post-area" key={i}>
-                      <div className="author-img">
+                      <div className="author-img for-desktop">
                         <img
                           src={`${url}/uploads/${post.user_id.image}`}
                           alt="Post author"
@@ -153,6 +230,13 @@ export default function LandingPage() {
                       <div className="post">
                         <div className="post-header">
                           <div className="author">
+                          <div className="author-img for-mobile">
+                        <img
+                          src={`${url}/uploads/${post.user_id.image}`}
+                          alt="Post author"
+                          className=""
+                        />
+                      </div>
                             <div className="username">{post.user_id.name}</div>
                             <div className="follow">Follow</div>
                           </div>

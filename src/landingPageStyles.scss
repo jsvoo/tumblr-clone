@@ -306,9 +306,13 @@ width: 100%;
       border-top-left-radius: 3px;
       border-top-right-radius: 3px;
       padding: 10px;
+
       .author{
         @extend .flex;
         gap: 10px;
+        .for-mobile{
+          display: none;
+        }
       }
       @extend .flex;
       background-color: white;
@@ -361,7 +365,9 @@ font-size: 30px;
   // display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 
-
+  .homepage-body .main-page .trending {
+    grid-template-columns: auto auto;
+}
 
   .post-area{
   // padding: 20px;
@@ -391,5 +397,109 @@ font-size: 30px;
       }
     }
   }
+ 
+}
+.on-mobile-grid{
+  @extend .gridView;
+  grid-template-columns: auto auto;
+  background-color: red;
+  
 }
 
+.mobile-trending{
+  @extend .trending;
+}
+
+@media (max-width:770px){
+  .homepage-body{
+    .for-desktop{
+      display: none;
+    }
+    width:98%;
+    justify-content:center;
+  .side-bar{display:none;}
+  .main-page{
+    width:90%;
+    border:none;
+    
+    nav{
+      width: 100%;
+      margin:0px;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-direction: column-reverse;
+      gap:20px;
+
+
+      .view-switch{
+        justify-content: flex-end;
+        width: 100%;
+      }
+
+    } 
+
+    .trending{
+      grid-template-columns: auto;
+    }
+    .mobile-trending{  
+      grid-template-columns: auto auto;
+    }
+
+    .post-area{
+      flex-direction: column;
+      gap:5px;
+
+      .post-header{ 
+        .author{ 
+          // flex-direction: column;
+          .for-mobile{
+            display: block;
+          }
+        }
+        .username{
+          font-size: 14px;
+        }
+
+        .options{
+          display:none;
+        }
+      }
+
+      .author-img{ 
+        height: 70px;
+        width: 70px;
+        img{
+          object-fit:cover;
+          height: 100%;
+          object-position: center;
+        }
+      }
+
+      .post{
+        .post-footer{
+          // display:block;
+          .notes{
+            font-size: 15px;
+          }
+
+          button{
+            font-size: 18px;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+ 
+  }
+
+
+ 
+}
+
+// .homepage-body {
+//   width: 80%;
+//   margin: auto;
+//   display: flex;
+// }

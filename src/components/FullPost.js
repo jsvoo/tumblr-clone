@@ -145,7 +145,7 @@ export default function FullPost() {
 
         {comments.length ? (
           <>
-            <div>
+            <div className="add-comment-section">
               <input
                 placeholder="enter commment"
                 className="input "

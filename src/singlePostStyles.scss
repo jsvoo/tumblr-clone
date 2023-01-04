@@ -25,3 +25,38 @@ margin: auto;
     outline: none;
   }
 }
+
+@media(max-width:770px){
+.fullPost-page{
+
+  .comments-box{
+    .add-comment-section{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap:10px;
+    }
+    padding: 0px;
+    padding-bottom: 80px;
+    .input{
+      width:80%;
+    }
+    button{
+      width:20%;
+      padding:20px;
+      height: 20px;
+      text-align:center;
+      display:flex;
+      align-items:center;
+      justify-content: center;
+    }
+  }
+
+  .post-area{
+    flex-direction: column;
+    
+  }
+}
+
+  
+}
